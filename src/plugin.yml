@@ -1,0 +1,7 @@
+name: VoidTP
+version: 1.0
+main: nl.jessegeerts.customplugins.voidtp.Main
+commands:
+  voidtpreload:
+    usage: /<command>
+    description: Reload voidtp
