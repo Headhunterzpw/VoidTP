@@ -18,6 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin implements Listener{
 
     public void onEnable(){
+        getLogger().info("This plugin was made by Jesse Geerts");
         Bukkit.getServer().getPluginManager().registerEvents(this, this);
         getConfig().addDefault("World", "world");
         getConfig().addDefault("X", 50);
