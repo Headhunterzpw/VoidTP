@@ -22,7 +22,7 @@ public class Main extends JavaPlugin implements Listener{
     
     //This is just to don't write getConfig() over and over again.
     private FileConfiguration config;
-
+//Thanks to the update from NahuLD on github https://github.com/NahuLD
     public void onEnable(){
         getLogger().info("This plugin was made by Jesse Geerts");
         Bukkit.getServer().getPluginManager().registerEvents(this, this);
