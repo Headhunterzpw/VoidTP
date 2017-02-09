@@ -5,3 +5,6 @@ commands:
   voidtpreload:
     usage: /<command>
     description: Reload voidtp
+  setvoidspawn:
+    usage: /<command>
+    description: Set the Spawn
