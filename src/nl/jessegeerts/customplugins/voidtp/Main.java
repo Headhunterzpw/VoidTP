@@ -32,6 +32,7 @@ public class Main extends JavaPlugin implements Listener{
         getConfig().addDefault("Z", 120);
         getConfig().addDefault("Pitch", 0);
         getConfig().addDefault("Yaw", 0);
+        getConfig().options().copyDefaults(true); //Forgot about this, whooops!
         saveConfig();
         
         config = getConfig();
@@ -69,8 +70,8 @@ public class Main extends JavaPlugin implements Listener{
                 config.set("X", (int) location.getX());
                 config.set("Y", (int) location.getY());
                 config.set("Z", (int) location.getZ());
-                config.set("Pitch", (int) location.getPitch());
-                config.set("Yaw", (int) location.getYaw());
+                config.set("Pitch", (double) location.getPitch());
+                config.set("Yaw", (double) location.getYaw());
                 saveConfig();
                 
                 player.sendMessage(ChatColor.GREEN + "Spawn successfully set!");
