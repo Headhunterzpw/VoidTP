@@ -22,7 +22,7 @@ public class Main extends JavaPlugin implements Listener{
     
     //This is just to don't write getConfig() over and over again.
     private FileConfiguration config;
-//Thanks to the update from NahuLD on github https://github.com/NahuLD
+
     public void onEnable(){
         getLogger().info("This plugin was made by Jesse Geerts");
         Bukkit.getServer().getPluginManager().registerEvents(this, this);
@@ -32,6 +32,7 @@ public class Main extends JavaPlugin implements Listener{
         getConfig().addDefault("Z", 120);
         getConfig().addDefault("Pitch", 0);
         getConfig().addDefault("Yaw", 0);
+        getConfig().options().copyDefaults(true); //Forgot about this, whooops!
         saveConfig();
         
         config = getConfig();
@@ -69,8 +70,8 @@ public class Main extends JavaPlugin implements Listener{
                 config.set("X", (int) location.getX());
                 config.set("Y", (int) location.getY());
                 config.set("Z", (int) location.getZ());
-                config.set("Pitch", (int) location.getPitch());
-                config.set("Yaw", (int) location.getYaw());
+                config.set("Pitch", (double) location.getPitch());
+                config.set("Yaw", (double) location.getYaw());
                 saveConfig();
                 
                 player.sendMessage(ChatColor.GREEN + "Spawn successfully set!");
