@@ -24,7 +24,7 @@ public class Main extends JavaPlugin implements Listener{
     private FileConfiguration config;
 
     public void onEnable(){
-        getLogger().info("This plugin was made by Jesse Geerts");
+        getLogger().info("This plugin was made by Jesse Geerts and NahuLD");
         Bukkit.getServer().getPluginManager().registerEvents(this, this);
         getConfig().addDefault("World", "world");
         getConfig().addDefault("X", 50);
@@ -32,7 +32,7 @@ public class Main extends JavaPlugin implements Listener{
         getConfig().addDefault("Z", 120);
         getConfig().addDefault("Pitch", 0);
         getConfig().addDefault("Yaw", 0);
-        getConfig().options().copyDefaults(true); //Forgot about this, whooops!
+        getConfig().options().copyDefaults(true);
         saveConfig();
         
         config = getConfig();
